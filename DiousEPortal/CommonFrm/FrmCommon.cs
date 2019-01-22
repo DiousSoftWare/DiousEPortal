@@ -16,7 +16,6 @@ using DevExpress.XtraEditors.Repository;
 using DevExpress.XtraGrid.Columns;
 
 //01
-//k
 namespace DiousEPortal
 {
  
