@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/EPortalModel" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/EPortalModel" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfT_ADMM_FuncList">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="T_ADMM_FuncList" nillable="true" type="tns:T_ADMM_FuncList" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfT_ADMM_FuncList" nillable="true" type="tns:ArrayOfT_ADMM_FuncList" />
+  <xs:complexType name="T_ADMM_FuncList">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="FrmNam" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FuncID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FuncNam" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="GroupID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Levels" type="xs:int" />
+      <xs:element minOccurs="0" name="ParentID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ParentNam" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ShowType" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="T_ADMM_FuncList" nillable="true" type="tns:T_ADMM_FuncList" />
+  <xs:complexType name="T_ADMM_UsrMst">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="FAppDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FApprover" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FApproverID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FCDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FCFlag" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FCanLoginPCList" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FCanManualNote" type="xs:boolean" />
+      <xs:element minOccurs="0" name="FCanProgNote" type="xs:boolean" />
+      <xs:element minOccurs="0" name="FCanWFNote" type="xs:boolean" />
+      <xs:element minOccurs="0" name="FCreator" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FCreatorID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FDateFormat" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FDisableDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FDisableDateOfPW" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FEffectDaysOfPW" type="xs:int" />
+      <xs:element minOccurs="0" name="FEmail" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FEmpNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FEnableDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FIfEMSUsr" type="xs:boolean" />
+      <xs:element minOccurs="0" name="FIfPrv" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FIfSupper" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FIfUse" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FLangID" type="xs:int" />
+      <xs:element minOccurs="0" name="FLinkNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FMainUIType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FMobile" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FModiDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FModifier" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FModifierID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FPrvCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FRemark" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FSharedIndex" type="xs:short" />
+      <xs:element minOccurs="0" name="FSrcSys" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FTimeStamp" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="FUsbKey" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FUseOnLock" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FUsrEName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FUsrID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FUsrName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FUsrStamp" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="_x_f009" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="T_ADMM_UsrMst" nillable="true" type="tns:T_ADMM_UsrMst" />
+</xs:schema>

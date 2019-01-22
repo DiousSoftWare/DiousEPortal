@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/EPortalCommom" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/EPortalCommom" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:simpleType name="OperType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="AddSave" />
+      <xs:enumeration value="CopySave" />
+      <xs:enumeration value="EditSave" />
+      <xs:enumeration value="Delete" />
+      <xs:enumeration value="Approve" />
+      <xs:enumeration value="UnApprove" />
+      <xs:enumeration value="Disable" />
+      <xs:enumeration value="Enable" />
+      <xs:enumeration value="CoverSlt" />
+      <xs:enumeration value="InitFilter" />
+      <xs:enumeration value="ShowFilter" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="OperType" nillable="true" type="tns:OperType" />
+</xs:schema>

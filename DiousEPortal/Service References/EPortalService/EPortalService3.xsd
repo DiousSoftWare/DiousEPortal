@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:65036/EPortalService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/EPortalModel" />
+  <xs:import schemaLocation="http://localhost:65036/EPortalService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/EPortalCommom" />
+  <xs:element name="GetMenus">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMenusResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/EPortalModel" minOccurs="0" name="GetMenusResult" nillable="true" type="q1:ArrayOfT_ADMM_FuncList" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UsrVal">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UsrID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PassWord" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UsrValResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UsrValResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSupperUsr">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSupperUsrResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetSupperUsrResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUsrByUsrID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UsrID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUsrByUsrIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/EPortalModel" minOccurs="0" name="GetUsrByUsrIDResult" nillable="true" type="q2:T_ADMM_UsrMst" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUsrGrpsToChCol">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TempTabNam" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="IfGetFstRow" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="FltSQL" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUsrGrpsToChColResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetUsrGrpsToChColResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetGrpUsrsByGrpCodeToChCol">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TempTabNam" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="GrpCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="IfGetFstRow" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PanelNam" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetGrpUsrsByGrpCodeToChColResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetGrpUsrsByGrpCodeToChColResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetCurUsrInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CurUsrID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="CurUsrName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetCurUsrInfoResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="StrXML" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SQL" nillable="true" type="xs:string" />
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/EPortalCommom" minOccurs="0" name="operType" type="q3:OperType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveDataResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveData1">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="StrXML" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SQL" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveData1Response">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RepeatCheck">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TabName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PrimaryKey" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="KeyValue" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RepeatCheckResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RepeatCheckResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetChColByEnCol">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TabNam" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="EnColNam" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetChColByEnColResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetChColByEnColResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetColsByPanelNam">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="PanelNam" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="FrmNam" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="TabNam" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetColsByPanelNamResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetColsByPanelNamResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFltColsByPanelNam">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="PanelNam" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="FrmNam" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFltColsByPanelNamResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetFltColsByPanelNamResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTabStrc">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TabNam" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="FrmNam" nillable="true" type="xs:string" />
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/EPortalCommom" minOccurs="0" name="operType" type="q4:OperType" />
+        <xs:element minOccurs="0" name="KeyWords" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PanelNam" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="CurUsrID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="CurUsrName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTabStrcResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetTabStrcResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTabByFrmNam">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="FrmNam" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTabByFrmNamResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetTabByFrmNamResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFltSlt">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UsrID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="FrmNam" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFltSltResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetFltSltResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddPrtFltSlt">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CurUsrID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SltName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="FrmName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddPrtFltSltResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AddPrtFltSltResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddShFltSlt">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UsrID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SltName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="FrmName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddShFltSltResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AddShFltSltResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DelFltSlt">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SltName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="FrmName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DelFltSltResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DelFltSltResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckIfUsrSlt">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SltName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="UsrID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="FrmName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckIfUsrSltResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CheckIfUsrSltResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EditFltSlt">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SltName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SltID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EditFltSltResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="EditFltSltResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveFltSlt">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/EPortalCommom" minOccurs="0" name="operType" type="q5:OperType" />
+        <xs:element minOccurs="0" name="StrXML" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="TabName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="KeyWords" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveFltSltResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMaxSltID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="FrmName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SltType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ParentID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMaxSltIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetMaxSltIDResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFltSltDtlBySltID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SltID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFltSltDtlBySltIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetFltSltDtlBySltIDResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BeginTransaction">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BeginTransactionResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CommitTransaction">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CommitTransactionResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveFltSlt1">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/EPortalCommom" minOccurs="0" name="operType" type="q6:OperType" />
+        <xs:element minOccurs="0" name="StrXML" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="TabName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="KeyWords" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveFltSlt1Response">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CloseSqlCon">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CloseSqlConResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
