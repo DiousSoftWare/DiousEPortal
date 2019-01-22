@@ -22,7 +22,7 @@ namespace DiousEPortal
 //02
     public partial class FrmCommon : XtraForm
     {
-        
+        //07
         ////////////////////////////定义全局变量//////////////////////////////
         public BtnNam BtnName;
         //定义页签关闭委托
