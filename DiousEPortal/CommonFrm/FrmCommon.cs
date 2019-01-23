@@ -19,7 +19,7 @@ using DevExpress.XtraGrid.Columns;
 //这是分支上的更改
 namespace DiousEPortal
 {
-//02
+
     public partial class FrmCommon : XtraForm
     {
         //09
