@@ -72,59 +72,59 @@
             // 
             // Tab_Common1
             // 
-            this.Tab_Common1.Location = new System.Drawing.Point(0, 66);
-            this.Tab_Common1.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
-            this.Tab_Common1.Size = new System.Drawing.Size(1471, 962);
+            this.Tab_Common1.Location = new System.Drawing.Point(0, 51);
+            this.Tab_Common1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Tab_Common1.Size = new System.Drawing.Size(1030, 603);
             this.Tab_Common1.Click += new System.EventHandler(this.Tab_Common1_Click);
             // 
             // Page_Detail
             // 
-            this.Page_Detail.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
-            this.Page_Detail.Size = new System.Drawing.Size(1465, 925);
+            this.Page_Detail.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Page_Detail.Size = new System.Drawing.Size(1024, 574);
             // 
             // Split_Detail
             // 
-            this.Split_Detail.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.Split_Detail.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Split_Detail.Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.Split_Detail_Panel1_Paint);
-            this.Split_Detail.Size = new System.Drawing.Size(1465, 925);
-            this.Split_Detail.SplitterPosition = 571;
+            this.Split_Detail.Size = new System.Drawing.Size(1024, 574);
+            this.Split_Detail.SplitterPosition = 565;
             // 
             // Tab_Common2
             // 
-            this.Tab_Common2.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
-            this.Tab_Common2.Size = new System.Drawing.Size(1457, 341);
+            this.Tab_Common2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Tab_Common2.Size = new System.Drawing.Size(0, 0);
             // 
             // Page_Common2
             // 
-            this.Page_Common2.Margin = new System.Windows.Forms.Padding(9, 13, 9, 13);
-            this.Page_Common2.Size = new System.Drawing.Size(1451, 304);
+            this.Page_Common2.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.Page_Common2.Size = new System.Drawing.Size(1088, 0);
             this.Page_Common2.Text = "授权用户";
             // 
             // Page_Preview
             // 
-            this.Page_Preview.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
-            this.Page_Preview.Size = new System.Drawing.Size(1577, 977);
+            this.Page_Preview.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Page_Preview.Size = new System.Drawing.Size(1102, 591);
             // 
             // Split_Preview
             // 
-            this.Split_Preview.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
-            this.Split_Preview.Size = new System.Drawing.Size(1577, 977);
+            this.Split_Preview.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Split_Preview.Size = new System.Drawing.Size(1102, 591);
             // 
             // Tab_Common3
             // 
-            this.Tab_Common3.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
-            this.Tab_Common3.Size = new System.Drawing.Size(1573, 718);
+            this.Tab_Common3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Tab_Common3.Size = new System.Drawing.Size(1098, 332);
             // 
             // Page_Common3
             // 
-            this.Page_Common3.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
-            this.Page_Common3.Size = new System.Drawing.Size(1567, 681);
+            this.Page_Common3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Page_Common3.Size = new System.Drawing.Size(1092, 303);
             this.Page_Common3.Text = "授权用户";
             // 
             // Panel6
             // 
-            this.Panel6.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
-            this.Panel6.Size = new System.Drawing.Size(1567, 681);
+            this.Panel6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Panel6.Size = new System.Drawing.Size(1092, 303);
             // 
             // Panel4
             // 
@@ -137,8 +137,8 @@
             this.Panel4.Controls.Add(this.Lab_Grpname);
             this.Panel4.Controls.Add(this.Txt_AppSts);
             this.Panel4.Controls.Add(this.lab_AppSts);
-            this.Panel4.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
-            this.Panel4.Size = new System.Drawing.Size(1461, 571);
+            this.Panel4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Panel4.Size = new System.Drawing.Size(1020, 565);
             this.Panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.Panel4_Paint);
             this.Panel4.Controls.SetChildIndex(this.lab_AppSts, 0);
             this.Panel4.Controls.SetChildIndex(this.Txt_AppSts, 0);
@@ -153,62 +153,60 @@
             // 
             // Panel3
             // 
-            this.Panel3.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
-            this.Panel3.Size = new System.Drawing.Size(1451, 304);
+            this.Panel3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Panel3.Size = new System.Drawing.Size(1088, 0);
             // 
             // Tab_Common6
             // 
-            this.Tab_Common6.Location = new System.Drawing.Point(2, 260);
-            this.Tab_Common6.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
-            this.Tab_Common6.Size = new System.Drawing.Size(1457, 309);
+            this.Tab_Common6.Location = new System.Drawing.Point(2, 366);
+            this.Tab_Common6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Tab_Common6.Size = new System.Drawing.Size(1016, 197);
             // 
             // Panel7
             // 
-            this.Panel7.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
-            this.Panel7.Size = new System.Drawing.Size(1451, 166);
+            this.Panel7.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Panel7.Size = new System.Drawing.Size(1010, 168);
             // 
             // Panel8
             // 
-            this.Panel8.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
-            this.Panel8.Size = new System.Drawing.Size(1451, 272);
+            this.Panel8.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Panel8.Size = new System.Drawing.Size(1088, 168);
             // 
             // Panel9
             // 
-            this.Panel9.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
-            this.Panel9.Size = new System.Drawing.Size(1563, 166);
+            this.Panel9.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Panel9.Size = new System.Drawing.Size(1088, 168);
             // 
             // Panel10
             // 
-            this.Panel10.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
-            this.Panel10.Size = new System.Drawing.Size(1563, 166);
+            this.Panel10.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Panel10.Size = new System.Drawing.Size(1088, 168);
             // 
             // Panel11
             // 
-            this.Panel11.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
-            this.Panel11.Size = new System.Drawing.Size(1563, 166);
+            this.Panel11.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Panel11.Size = new System.Drawing.Size(1088, 168);
             // 
             // Panel12
             // 
-            this.Panel12.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
-            this.Panel12.Size = new System.Drawing.Size(1563, 166);
+            this.Panel12.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Panel12.Size = new System.Drawing.Size(1088, 168);
             // 
             // Memo_Remark
             // 
-            this.Memo_Remark.Location = new System.Drawing.Point(127, 192);
-            this.Memo_Remark.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Memo_Remark.Location = new System.Drawing.Point(89, 122);
             this.Memo_Remark.Name = "Memo_Remark";
             this.Memo_Remark.Properties.LookAndFeel.TouchUIMode = DevExpress.LookAndFeel.TouchUIMode.False;
-            this.Memo_Remark.Size = new System.Drawing.Size(557, 187);
+            this.Memo_Remark.Size = new System.Drawing.Size(390, 119);
             this.Memo_Remark.TabIndex = 55;
             this.Memo_Remark.Tag = "1,备注";
             this.Memo_Remark.EditValueChanged += new System.EventHandler(this.Memo_Remark_EditValueChanged);
             // 
             // labelControl1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(54, 196);
-            this.labelControl1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.labelControl1.Location = new System.Drawing.Point(38, 125);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(36, 22);
+            this.labelControl1.Size = new System.Drawing.Size(24, 14);
             this.labelControl1.TabIndex = 54;
             this.labelControl1.Tag = "0";
             this.labelControl1.Text = "备注";
@@ -217,73 +215,68 @@
             // 
             this.Chk_IfUse.EditValue = true;
             this.Chk_IfUse.Enabled = false;
-            this.Chk_IfUse.Location = new System.Drawing.Point(127, 154);
-            this.Chk_IfUse.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Chk_IfUse.Location = new System.Drawing.Point(89, 98);
             this.Chk_IfUse.Name = "Chk_IfUse";
             this.Chk_IfUse.Properties.Caption = "是否启用";
             this.Chk_IfUse.Properties.LookAndFeel.TouchUIMode = DevExpress.LookAndFeel.TouchUIMode.False;
-            this.Chk_IfUse.Size = new System.Drawing.Size(107, 26);
+            this.Chk_IfUse.Size = new System.Drawing.Size(75, 19);
             this.Chk_IfUse.TabIndex = 53;
             this.Chk_IfUse.Tag = "1,是否启用";
+            this.Chk_IfUse.CheckedChanged += new System.EventHandler(this.Chk_IfUse_CheckedChanged);
             // 
             // Txt_AppSts
             // 
             this.Txt_AppSts.Enabled = false;
-            this.Txt_AppSts.Location = new System.Drawing.Point(127, 110);
-            this.Txt_AppSts.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Txt_AppSts.Location = new System.Drawing.Point(89, 70);
             this.Txt_AppSts.Name = "Txt_AppSts";
             this.Txt_AppSts.Properties.LookAndFeel.TouchUIMode = DevExpress.LookAndFeel.TouchUIMode.False;
-            this.Txt_AppSts.Size = new System.Drawing.Size(249, 28);
+            this.Txt_AppSts.Size = new System.Drawing.Size(174, 20);
             this.Txt_AppSts.TabIndex = 52;
             this.Txt_AppSts.Tag = "1,审核状态";
             this.Txt_AppSts.EditValueChanged += new System.EventHandler(this.Txt_AppSts_EditValueChanged);
             // 
             // lab_AppSts
             // 
-            this.lab_AppSts.Location = new System.Drawing.Point(24, 110);
-            this.lab_AppSts.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.lab_AppSts.Location = new System.Drawing.Point(17, 70);
             this.lab_AppSts.Name = "lab_AppSts";
-            this.lab_AppSts.Size = new System.Drawing.Size(72, 22);
+            this.lab_AppSts.Size = new System.Drawing.Size(48, 14);
             this.lab_AppSts.TabIndex = 51;
             this.lab_AppSts.Tag = "0";
             this.lab_AppSts.Text = "审核状态";
             // 
             // Txt_Grpname
             // 
-            this.Txt_Grpname.Location = new System.Drawing.Point(127, 66);
-            this.Txt_Grpname.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Txt_Grpname.Location = new System.Drawing.Point(89, 42);
             this.Txt_Grpname.Name = "Txt_Grpname";
             this.Txt_Grpname.Properties.LookAndFeel.TouchUIMode = DevExpress.LookAndFeel.TouchUIMode.False;
-            this.Txt_Grpname.Size = new System.Drawing.Size(249, 28);
+            this.Txt_Grpname.Size = new System.Drawing.Size(174, 20);
             this.Txt_Grpname.TabIndex = 50;
             this.Txt_Grpname.Tag = "1,分组名称";
+            this.Txt_Grpname.EditValueChanged += new System.EventHandler(this.Txt_Grpname_EditValueChanged);
             // 
             // Lab_Grpname
             // 
-            this.Lab_Grpname.Location = new System.Drawing.Point(13, 66);
-            this.Lab_Grpname.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Lab_Grpname.Location = new System.Drawing.Point(9, 42);
             this.Lab_Grpname.Name = "Lab_Grpname";
-            this.Lab_Grpname.Size = new System.Drawing.Size(90, 22);
+            this.Lab_Grpname.Size = new System.Drawing.Size(60, 14);
             this.Lab_Grpname.TabIndex = 49;
             this.Lab_Grpname.Tag = "0";
             this.Lab_Grpname.Text = "用户组名称";
             // 
             // Txt_Grpcode
             // 
-            this.Txt_Grpcode.Location = new System.Drawing.Point(127, 20);
-            this.Txt_Grpcode.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Txt_Grpcode.Location = new System.Drawing.Point(89, 13);
             this.Txt_Grpcode.Name = "Txt_Grpcode";
             this.Txt_Grpcode.Properties.LookAndFeel.TouchUIMode = DevExpress.LookAndFeel.TouchUIMode.False;
-            this.Txt_Grpcode.Size = new System.Drawing.Size(249, 28);
+            this.Txt_Grpcode.Size = new System.Drawing.Size(174, 20);
             this.Txt_Grpcode.TabIndex = 48;
             this.Txt_Grpcode.Tag = "1,分组代号";
             // 
             // Lab_Grpcode
             // 
-            this.Lab_Grpcode.Location = new System.Drawing.Point(13, 20);
-            this.Lab_Grpcode.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Lab_Grpcode.Location = new System.Drawing.Point(9, 13);
             this.Lab_Grpcode.Name = "Lab_Grpcode";
-            this.Lab_Grpcode.Size = new System.Drawing.Size(90, 22);
+            this.Lab_Grpcode.Size = new System.Drawing.Size(60, 14);
             this.Lab_Grpcode.TabIndex = 47;
             this.Lab_Grpcode.Tag = "0";
             this.Lab_Grpcode.Text = "用户组代号";
@@ -291,11 +284,11 @@
             // 
             // FrmUserGroup
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1471, 1028);
+            this.ClientSize = new System.Drawing.Size(1030, 654);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FrmUserGroup";
             this.ShowIcon = false;
             this.Text = "用户组资料管理";

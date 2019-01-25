@@ -75,7 +75,6 @@ namespace DiousEPortal
         {
             string TabNam = "t_ADMM_GrpMst";
             string PriKey = "fGrpCode";
-            //string FrmNam = "DiousEPortal.FrmUserGroup";
             FocColNam = "分组代号";
             if(BtnName==BtnNam.Add || BtnName==BtnNam.Copy)
             {
@@ -854,6 +853,14 @@ namespace DiousEPortal
 
         }
 
+        private void Txt_Grpname_EditValueChanged(object sender, EventArgs e)
+        {
 
+        }
+
+        private void Chk_IfUse_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

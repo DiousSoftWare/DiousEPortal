@@ -199,7 +199,10 @@ namespace DiousEPortal
                     if (BtnName != BtnNam.Null)
                     {
                         dynamic EObject = (ExpandoObject)View_Common2.GetFocusedRow();
-                        FocColVal = EObject.分组代号;
+                        if(EObject !=null)
+                        {
+                            FocColVal = EObject.分组代号;
+                        }                     
                         //LocRowByVal(View_Common2, FocColNam, EObject.分组代号);
                         //View_Common2.FocusedRowHandle;
                     }
@@ -273,7 +276,7 @@ namespace DiousEPortal
                 CurFilter.CurOperType = OperType.ShowFilter;
             }  
             CurFilter.ShowDialog();
-           //11
+
             //获取到过滤SQL
             FltSQL = CurFilter.FltSQL;
             if (FltSQL != null)
@@ -287,11 +290,120 @@ namespace DiousEPortal
                     ShowData(Grip_Common3, GetDataByFocRow(EObject, "Panel6"), GetDataByPKToChCol("Panel6"), View_Common3, "Panel6");
                     ShowData(Grip_Common1, GetDataByFocRow(EObject, "Panel3"), GetDataByPKToChCol("Panel3"), View_Common1, "Panel3");
                 }
+                //如果没有过滤结果则清空相关控件的数据显示
                 else
                 {
-                    Grip_Common1.DataSource = null;
-                    Grip_Common2.DataSource = null;
-                    Grip_Common3.DataSource = null;
+                    //1.清空“Panel4”面板上“数据绑定控件”的数据
+                    int ContrNo = Panel4.Controls.Count;
+                    if (Panel4.Controls.Count>0)
+                    {
+                        foreach (Control Contr in Panel4.Controls)
+                        {
+                            if (Contr.Name == "Tab_Common6")
+                            {
+                                if (Panel7.Controls.Count > 0)
+                                {
+                                    foreach (Control Contr1 in Panel7.Controls)
+                                    {
+                                        if (Contr1.Tag!=null && Contr1.Tag.ToString().Substring(0, 1) == "1")
+                                        {
+                                            Contr1.Text = "";
+                                        }
+                                    }
+                                }
+
+
+                                if (Panel8.Controls.Count > 0)
+                                {
+                                    foreach (Control Contr2 in Panel8.Controls)
+                                    {
+                                        if (Contr2.Tag !=null && Contr2.Tag.ToString().Substring(0, 1) == "1")
+                                        {
+                                            Contr2.Text = "";
+                                        }
+                                    }
+                                }
+
+                                if (Panel9.Controls.Count > 0)
+                                {
+                                    foreach (Control Contr3 in Panel9.Controls)
+                                    {
+                                        if (Contr3.Tag!=null && Contr3.Tag.ToString().Substring(0, 1) == "1")
+                                        {
+                                            Contr3.Text = "";
+                                        }
+                                    }
+                                }
+
+                                if (Panel10.Controls.Count > 0)
+                                {
+                                    foreach (Control Contr4 in Panel10.Controls)
+                                    {
+                                        if (Contr4.Tag !=null && Contr4.Tag.ToString().Substring(0, 1) == "1")
+                                        {
+                                            Contr4.Text = "";
+                                        }
+                                    }
+                                }
+
+                                if (Panel11.Controls.Count > 0)
+                                {
+                                    foreach (Control Contr5 in Panel11.Controls)
+                                    {
+                                        if (Contr5.Tag!=null && Panel11.Controls.Count > 0 && Contr5.Tag.ToString().Substring(0, 1) == "1")
+                                        {
+                                            Contr5.Text = "";
+                                        }
+                                    }
+                                }
+
+                                if (Panel12.Controls.Count > 0)
+                                {
+                                    foreach (Control Contr6 in Panel12.Controls)
+                                    {
+                                        if (Contr6.Tag !=null && Contr6.Tag.ToString().Substring(0, 1) == "1")
+                                        {
+                                            Contr6.Text = "";
+                                        }
+                                    }
+                                }
+
+                            }
+                            else
+                            {
+                                if (Contr.Tag != null && Contr.Tag.ToString().Substring(0, 1) == "1")
+                                {
+                                    if (Contr.Name.ToString().Substring(0, 3) == "Chk")
+                                    {
+                                        ((CheckEdit)Contr).Checked = false;
+                                    }
+                                    else
+                                    {
+                                        Contr.Text = "";
+                                    }     
+                                }
+
+                            }
+                        }
+                    }
+                    //删除View_Common1所有数据
+                    View_Common1.OptionsSelection.MultiSelect = true;
+                    View_Common1.SelectAll();
+                    View_Common1.DeleteSelectedRows();
+                    View_Common1.OptionsSelection.MultiSelect = false;
+
+                    //删除View_Common2所有数据
+                    View_Common2.OptionsSelection.MultiSelect = true;
+                    View_Common2.SelectAll();
+                    View_Common2.DeleteSelectedRows();
+                    View_Common2.OptionsSelection.MultiSelect = false;
+
+                    //删除View_Common3所有数据
+                    View_Common3.OptionsSelection.MultiSelect = true;
+                    View_Common3.SelectAll();
+                    View_Common3.DeleteSelectedRows();
+                    View_Common3.OptionsSelection.MultiSelect = false;
+
                 }
                
             }
@@ -428,7 +540,7 @@ namespace DiousEPortal
                 List<ExpandoObject> EObj = AddNewRow(View_Common1);
                 ((BindingList<ExpandoObject>)View_Common1.DataSource).Add(EObj[0]);
                 View_Common1.OptionsView.NewItemRowPosition = NewItemRowPosition.Bottom;
-                SetColumnEdit(View_Common1, "Panel3");
+                SetColumnEdit(View_Common1, "Panel3");    
             }
             catch (Exception Ex)
             {
@@ -476,7 +588,10 @@ namespace DiousEPortal
                 Tab_Common1.SelectedTabPage = Page_Detail;
                 AssiValue();
                 ExpandoObject EObject = (ExpandoObject)View_Common2.GetFocusedRow();
-                ShowData(Grip_Common1, GetDataByFocRow(EObject, "Panel3"), GetDataByPKToChCol("Panel3"), View_Common1, "Panel3");
+                if(EObject !=null)
+                {
+                    ShowData(Grip_Common1, GetDataByFocRow(EObject, "Panel3"), GetDataByPKToChCol("Panel3"), View_Common1, "Panel3");
+                }
             }
             catch (Exception Ex)
             {
@@ -497,7 +612,11 @@ namespace DiousEPortal
                 {                   
                 AssiValue();
                 ExpandoObject EObject = (ExpandoObject)View_Common2.GetFocusedRow();
-                ShowData(Grip_Common1, GetDataByFocRow(EObject, "Panel3"), GetDataByPKToChCol("Panel3"), View_Common1, "Panel3");
+                if(EObject != null)
+                {
+                   ShowData(Grip_Common1, GetDataByFocRow(EObject, "Panel3"), GetDataByPKToChCol("Panel3"), View_Common1, "Panel3");
+                }
+                
                 }
             }
             catch (Exception Ex)
@@ -737,22 +856,26 @@ namespace DiousEPortal
         public void BtnEnabledByFocusRow()
         {
             dynamic EObject = (ExpandoObject)View_Common2.GetFocusedRow();
-            if (EObject.审核状态 == "已审核" && EObject.是否启用 == "已启用")
+            if(EObject !=null)
             {
-                BtnEnabledByState(State.Check, State.Enable);
+                if (EObject.审核状态 == "已审核" && EObject.是否启用 == "已启用")
+                {
+                    BtnEnabledByState(State.Check, State.Enable);
+                }
+                else if (EObject.审核状态 == "已审核" && EObject.是否启用 == "未启用")
+                {
+                    BtnEnabledByState(State.Check, State.Disable);
+                }
+                else if (EObject.审核状态 == "未审核" && EObject.是否启用 == "已启用")
+                {
+                    BtnEnabledByState(State.Uncheck, State.Enable);
+                }
+                else if (EObject.审核状态 == "未审核" && EObject.是否启用 == "未启用")
+                {
+                    BtnEnabledByState(State.Uncheck, State.Disable);
+                }
             }
-            else if (EObject.审核状态 == "已审核" && EObject.是否启用 == "未启用")
-            {
-                BtnEnabledByState(State.Check, State.Disable);
-            }
-            else if (EObject.审核状态 == "未审核" && EObject.是否启用 == "已启用")
-            {
-                BtnEnabledByState(State.Uncheck, State.Enable);
-            }
-            else if (EObject.审核状态 == "未审核" && EObject.是否启用 == "未启用")
-            {
-                BtnEnabledByState(State.Uncheck, State.Disable);
-            }
+            
         }
 
         /// <summary>
@@ -987,19 +1110,23 @@ namespace DiousEPortal
             try
             {
                 dynamic EObject = (ExpandoObject)View_Common2.GetFocusedRow();
-                IDictionary<string, object> IDObj = EObject;
-                //根据面板名称读取该面板内所有相关字段信息
-                List<ExpandoObject> List_EObj = Serializer.DeserializeXMLToEObject(GetColsByPanelNam("Panel4", FrmNam,""));
-
-                //遍历字段列表设置网格控件单元格字段属性
-                foreach (dynamic EObj in List_EObj)
+                if(EObject != null)
                 {
-                    if(EObj.FContrNam !="")
+                    IDictionary<string, object> IDObj = EObject;
+                    //根据面板名称读取该面板内所有相关字段信息
+                    List<ExpandoObject> List_EObj = Serializer.DeserializeXMLToEObject(GetColsByPanelNam("Panel4", FrmNam, ""));
+
+                    //遍历字段列表设置网格控件单元格字段属性
+                    foreach (dynamic EObj in List_EObj)
                     {
-                        Panel4.Controls[EObj.FContrNam].Text = IDObj[EObj.FRemark];
-                    }                   
+                        if (EObj.FContrNam != "")
+                        {
+                            Panel4.Controls[EObj.FContrNam].Text = IDObj[EObj.FRemark];
+                        }
+                    }
+                    ShowData(Grip_Common1, GetDataByFocRow(EObject, "Panel3"), GetDataByPKToChCol("Panel3"), View_Common1, "Panel3");
                 }
-                ShowData(Grip_Common1, GetDataByFocRow(EObject, "Panel3"), GetDataByPKToChCol("Panel3"),View_Common1, "Panel3");
+               
             }
             catch (Exception Ex)
             {
@@ -1023,7 +1150,11 @@ namespace DiousEPortal
             try
             {
                 ExpandoObject EObject = (ExpandoObject)View_Common2.GetFocusedRow();
-                ShowData(Grip_Common3, GetDataByFocRow(EObject,"Panel6"), GetDataByPKToChCol("Panel6"), View_Common3, "Panel6");
+
+                if(EObject !=null)
+                {
+                    ShowData(Grip_Common3, GetDataByFocRow(EObject, "Panel6"), GetDataByPKToChCol("Panel6"), View_Common3, "Panel6");
+                }                
             }
             catch (Exception Ex)
             {
@@ -1208,6 +1339,11 @@ namespace DiousEPortal
                 Common.ShowMsg(Ex.Message);
             }
             return new Dictionary<string, object>();
+        }
+
+        private void Panel4_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
