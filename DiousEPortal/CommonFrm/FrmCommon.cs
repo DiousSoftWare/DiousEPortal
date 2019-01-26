@@ -1070,7 +1070,12 @@ namespace DiousEPortal
                                 }
                                 //如果点击增加按钮，则控件值按绑定字段的默认值取
                                 else if (BtnName==BtnNam.Add)
-                                {                                   
+                                {          
+                                    //将"是否启用"按钮默认勾上
+                                    if(EObj.FContrNam == "Chk_IfUse")
+                                    {
+                                        ((CheckEdit)(Panel4.Controls[EObj.FContrNam])).Checked = true;
+                                    }                         
                                     Panel4.Controls[EObj.FContrNam].Text = EObj.FDefValue;
                                 }
 
