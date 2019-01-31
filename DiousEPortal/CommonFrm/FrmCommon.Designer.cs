@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            DevExpress.Utils.SuperToolTip superToolTip1 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipItem toolTipItem1 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip2 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipItem toolTipItem2 = new DevExpress.Utils.ToolTipItem();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCommon));
             this.BarManager_FrmMenus = new DevExpress.XtraBars.BarManager(this.components);
             this.Bar_Menus = new DevExpress.XtraBars.Bar();
@@ -482,11 +482,11 @@
             this.barSubItem5.Id = 36;
             this.barSubItem5.LargeGlyph = global::DiousEPortal.Properties.Resources.filter_16x16;
             this.barSubItem5.Name = "barSubItem5";
-            toolTipItem1.Appearance.Image = global::DiousEPortal.Properties.Resources.filter_16x16;
-            toolTipItem1.Appearance.Options.UseImage = true;
-            toolTipItem1.Image = global::DiousEPortal.Properties.Resources.filter_16x16;
-            superToolTip1.Items.Add(toolTipItem1);
-            this.barSubItem5.SuperTip = superToolTip1;
+            toolTipItem2.Appearance.Image = global::DiousEPortal.Properties.Resources.filter_16x16;
+            toolTipItem2.Appearance.Options.UseImage = true;
+            toolTipItem2.Image = global::DiousEPortal.Properties.Resources.filter_16x16;
+            superToolTip2.Items.Add(toolTipItem2);
+            this.barSubItem5.SuperTip = superToolTip2;
             // 
             // barLargeButtonItem1
             // 
@@ -625,7 +625,7 @@
             this.xtraTabPage3.Controls.Add(this.Panel8);
             this.xtraTabPage3.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.xtraTabPage3.Name = "xtraTabPage3";
-            this.xtraTabPage3.Size = new System.Drawing.Size(1557, 335);
+            this.xtraTabPage3.Size = new System.Drawing.Size(1563, 335);
             this.xtraTabPage3.Text = "xtraTabPage3";
             // 
             // Panel8
@@ -634,7 +634,7 @@
             this.Panel8.Location = new System.Drawing.Point(0, 0);
             this.Panel8.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Panel8.Name = "Panel8";
-            this.Panel8.Size = new System.Drawing.Size(1557, 335);
+            this.Panel8.Size = new System.Drawing.Size(1563, 335);
             this.Panel8.TabIndex = 0;
             // 
             // xtraTabPage4
@@ -642,7 +642,7 @@
             this.xtraTabPage4.Controls.Add(this.Panel9);
             this.xtraTabPage4.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.xtraTabPage4.Name = "xtraTabPage4";
-            this.xtraTabPage4.Size = new System.Drawing.Size(1557, 335);
+            this.xtraTabPage4.Size = new System.Drawing.Size(1563, 335);
             this.xtraTabPage4.Text = "xtraTabPage4";
             // 
             // Panel9
@@ -651,7 +651,7 @@
             this.Panel9.Location = new System.Drawing.Point(0, 0);
             this.Panel9.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Panel9.Name = "Panel9";
-            this.Panel9.Size = new System.Drawing.Size(1557, 335);
+            this.Panel9.Size = new System.Drawing.Size(1563, 335);
             this.Panel9.TabIndex = 0;
             // 
             // xtraTabPage5
@@ -659,7 +659,7 @@
             this.xtraTabPage5.Controls.Add(this.Panel10);
             this.xtraTabPage5.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.xtraTabPage5.Name = "xtraTabPage5";
-            this.xtraTabPage5.Size = new System.Drawing.Size(1557, 335);
+            this.xtraTabPage5.Size = new System.Drawing.Size(1563, 335);
             this.xtraTabPage5.Text = "xtraTabPage5";
             // 
             // Panel10
@@ -668,7 +668,7 @@
             this.Panel10.Location = new System.Drawing.Point(0, 0);
             this.Panel10.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Panel10.Name = "Panel10";
-            this.Panel10.Size = new System.Drawing.Size(1557, 335);
+            this.Panel10.Size = new System.Drawing.Size(1563, 335);
             this.Panel10.TabIndex = 0;
             // 
             // xtraTabPage6
@@ -676,7 +676,7 @@
             this.xtraTabPage6.Controls.Add(this.Panel11);
             this.xtraTabPage6.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.xtraTabPage6.Name = "xtraTabPage6";
-            this.xtraTabPage6.Size = new System.Drawing.Size(1557, 335);
+            this.xtraTabPage6.Size = new System.Drawing.Size(1563, 335);
             this.xtraTabPage6.Text = "xtraTabPage6";
             // 
             // Panel11
@@ -685,7 +685,7 @@
             this.Panel11.Location = new System.Drawing.Point(0, 0);
             this.Panel11.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Panel11.Name = "Panel11";
-            this.Panel11.Size = new System.Drawing.Size(1557, 335);
+            this.Panel11.Size = new System.Drawing.Size(1563, 335);
             this.Panel11.TabIndex = 0;
             // 
             // xtraTabPage7
@@ -693,7 +693,7 @@
             this.xtraTabPage7.Controls.Add(this.Panel12);
             this.xtraTabPage7.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.xtraTabPage7.Name = "xtraTabPage7";
-            this.xtraTabPage7.Size = new System.Drawing.Size(1557, 335);
+            this.xtraTabPage7.Size = new System.Drawing.Size(1563, 335);
             this.xtraTabPage7.Text = "xtraTabPage7";
             // 
             // Panel12
@@ -702,7 +702,7 @@
             this.Panel12.Location = new System.Drawing.Point(0, 0);
             this.Panel12.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Panel12.Name = "Panel12";
-            this.Panel12.Size = new System.Drawing.Size(1557, 335);
+            this.Panel12.Size = new System.Drawing.Size(1563, 335);
             this.Panel12.TabIndex = 0;
             // 
             // Tab_Common2
@@ -771,7 +771,7 @@
             this.Page_Preview.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Page_Preview.Name = "Page_Preview";
             this.Page_Preview.ShowCloseButton = DevExpress.Utils.DefaultBoolean.True;
-            this.Page_Preview.Size = new System.Drawing.Size(1577, 889);
+            this.Page_Preview.Size = new System.Drawing.Size(1577, 913);
             this.Page_Preview.Text = "浏览";
             // 
             // Split_Preview
@@ -789,7 +789,7 @@
             this.Split_Preview.Panel2.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.Split_Preview.Panel2.Controls.Add(this.Tab_Common3);
             this.Split_Preview.Panel2.Text = "Panel2";
-            this.Split_Preview.Size = new System.Drawing.Size(1577, 889);
+            this.Split_Preview.Size = new System.Drawing.Size(1577, 913);
             this.Split_Preview.SplitterPosition = 250;
             this.Split_Preview.TabIndex = 0;
             this.Split_Preview.Text = "splitContainerControl2";
@@ -844,7 +844,7 @@
             this.Tab_Common3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Tab_Common3.Name = "Tab_Common3";
             this.Tab_Common3.SelectedTabPage = this.Page_Common3;
-            this.Tab_Common3.Size = new System.Drawing.Size(1573, 630);
+            this.Tab_Common3.Size = new System.Drawing.Size(1573, 654);
             this.Tab_Common3.TabIndex = 0;
             this.Tab_Common3.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.Page_Common3});
@@ -854,7 +854,7 @@
             this.Page_Common3.Controls.Add(this.Panel6);
             this.Page_Common3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Page_Common3.Name = "Page_Common3";
-            this.Page_Common3.Size = new System.Drawing.Size(1567, 593);
+            this.Page_Common3.Size = new System.Drawing.Size(1567, 617);
             this.Page_Common3.Text = "xtraTabPage3";
             // 
             // Panel6
@@ -864,7 +864,7 @@
             this.Panel6.Location = new System.Drawing.Point(0, 0);
             this.Panel6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Panel6.Name = "Panel6";
-            this.Panel6.Size = new System.Drawing.Size(1567, 593);
+            this.Panel6.Size = new System.Drawing.Size(1567, 617);
             this.Panel6.TabIndex = 0;
             // 
             // Grip_Common3
@@ -877,7 +877,7 @@
             this.Grip_Common3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Grip_Common3.MenuManager = this.BarManager_FrmMenus;
             this.Grip_Common3.Name = "Grip_Common3";
-            this.Grip_Common3.Size = new System.Drawing.Size(1563, 589);
+            this.Grip_Common3.Size = new System.Drawing.Size(1563, 613);
             this.Grip_Common3.TabIndex = 0;
             this.Grip_Common3.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.View_Common3});
