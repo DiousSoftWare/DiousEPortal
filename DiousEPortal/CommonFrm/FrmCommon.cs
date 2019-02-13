@@ -20,7 +20,7 @@ namespace DiousEPortal
      
     public partial class FrmCommon : XtraForm
     {
-       //666666
+       
         ////////////////////////////定义全局变量//////////////////////////////
         public BtnNam BtnName;
         //定义页签关闭委托
@@ -45,7 +45,7 @@ namespace DiousEPortal
         /// 当前打开的过滤窗口实例
         /// </summary>
         public FrmFilter CurFilter { get; set; }
-        //96
+       
         /// <summary>
         /// 继承本窗体的子窗体全名
         /// </summary>
@@ -56,7 +56,9 @@ namespace DiousEPortal
         //设置或返回过滤数据SQL语句
         public string FltSQL { get; set; }
 
-       
+        //设置或返回细表被点击的可编辑字段名
+        public string ClkColNm { get; set; }
+
         /// <summary>
         /// 构造函数
         /// </summary>
@@ -139,6 +141,7 @@ namespace DiousEPortal
 
                 if (SaveData() == 1)
                 {
+                    
                     View_Common2.FocusedRowHandle = LocRowByVal(View_Common2, FocColNam, FocColVal);
                     BtnName = BtnNam.Save;
                     BtnEnabledByFocusRow();       
@@ -1154,6 +1157,7 @@ namespace DiousEPortal
         {
             try
             {
+               
                 ExpandoObject EObject = (ExpandoObject)View_Common2.GetFocusedRow();
 
                 if(EObject !=null)
@@ -1183,8 +1187,13 @@ namespace DiousEPortal
                 {
                     if (EObj.FColEdit != "")
                     {
-                        //如果FColEdit属性值不为空，则根据FColEdit属性值反射单元格编辑控件
-                        Grid.Columns[EObj.FRemark].ColumnEdit = Assembly.Load("DevExpress.XtraEditors.v14.1").CreateInstance(EObj.FColEdit) as RepositoryItem;
+                        //如果FColEdit属性值不为空，则根据FColEdit属性值反射单元格编辑控件 RepositoryItem
+                        RepositoryItemButtonEdit EditContr = Assembly.Load("DevExpress.XtraEditors.v14.1").CreateInstance(EObj.FColEdit);
+                        //EditContr.Tag = "EditContr_" + EObj.FColNm;
+
+                        EditContr.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.EditClick);
+                        Grid.Columns[EObj.FRemark].ColumnEdit =(RepositoryItemButtonEdit)EditContr;
+
                     }
                     else if (EObj.FIfHide == "1")
                     {
@@ -1199,6 +1208,15 @@ namespace DiousEPortal
             }
         }
 
+        /// <summary>
+        /// 列编辑控件点击事件方法
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        public virtual void EditClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        {
+          
+        }
 
         /// <summary>
         /// 保存数据
@@ -1244,7 +1262,7 @@ namespace DiousEPortal
                         GridCrl.DataSource = Serializer.DeserializeXMLToEObject(XMLDS);
                         view.DeleteSelectedRows();
                     }
-
+                     
                     SetColumnEdit(view, PanelNam);
                 }
 
