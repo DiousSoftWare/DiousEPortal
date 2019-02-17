@@ -13,6 +13,8 @@ using System.Dynamic;
 using System.Data.SqlClient;
 using DevExpress.XtraEditors.Repository;
 using System.Reflection;
+using System.Net;
+using System.Net.Mail;
 
 namespace DiousEPortal
 {
@@ -861,6 +863,51 @@ namespace DiousEPortal
         private void Chk_IfUse_CheckedChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void simpleButton1_Click(object sender, EventArgs e)
+        {
+            MailMessage msg = new MailMessage();
+            //增加收件人
+            msg.To.Add("569338665@qq.com");
+            //增加抄送人
+            //msg.CC.Add("抄送人地址@qq.com");
+            //增加发件人
+            msg.From = new MailAddress("1834619488@qq.com", "QQ");
+            //邮件标题
+            msg.Subject = "收款通知";
+            //标题格式为UTF8  
+            msg.SubjectEncoding = Encoding.UTF8;
+            //邮件内容
+            msg.Body = "尊敬的李丽，您的账户有新的款项收取，你查收，谢谢！";
+            //内容格式为UTF8 
+            msg.BodyEncoding = Encoding.UTF8;
+
+            SmtpClient client = new SmtpClient();
+            //SMTP服务器地址 
+            client.Host = "smtp.qq.com";
+            //SMTP端口，QQ邮箱填写587  
+            client.Port = 587;
+            //启用SSL加密  
+            client.EnableSsl = true;
+
+            //569338665@qq.com邮箱授权码:eetfvgzxwhflbeab
+            //1834619488@qq.com邮箱授权码:oddqlnangcdrdiji
+            client.Credentials = new NetworkCredential("1834619488@qq.com", "oddqlnangcdrdiji");
+            //发送邮件  
+            try
+            {
+                client.Send(msg);
+            }
+            catch (SmtpException ex)
+            {
+                Common.ShowMsg(ex.Message);
+            }
+            finally
+            {
+                client.Dispose();
+                msg.Dispose();
+            }
         }
     }
 }
