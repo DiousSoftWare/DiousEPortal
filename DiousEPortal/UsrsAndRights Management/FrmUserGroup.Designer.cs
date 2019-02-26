@@ -38,6 +38,7 @@
             this.Txt_Grpcode = new DevExpress.XtraEditors.TextEdit();
             this.Lab_Grpcode = new DevExpress.XtraEditors.LabelControl();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.Tab_Common1)).BeginInit();
             this.Tab_Common1.SuspendLayout();
             this.Page_Detail.SuspendLayout();
@@ -129,6 +130,7 @@
             // 
             // Panel4
             // 
+            this.Panel4.Controls.Add(this.simpleButton2);
             this.Panel4.Controls.Add(this.simpleButton1);
             this.Panel4.Controls.Add(this.Txt_Grpname);
             this.Panel4.Controls.Add(this.Memo_Remark);
@@ -153,6 +155,7 @@
             this.Panel4.Controls.SetChildIndex(this.Txt_Grpname, 0);
             this.Panel4.Controls.SetChildIndex(this.Tab_Common6, 0);
             this.Panel4.Controls.SetChildIndex(this.simpleButton1, 0);
+            this.Panel4.Controls.SetChildIndex(this.simpleButton2, 0);
             // 
             // Panel3
             // 
@@ -296,12 +299,21 @@
             // 
             // simpleButton1
             // 
-            this.simpleButton1.Location = new System.Drawing.Point(778, 66);
+            this.simpleButton1.Location = new System.Drawing.Point(604, 69);
             this.simpleButton1.Name = "simpleButton1";
             this.simpleButton1.Size = new System.Drawing.Size(158, 43);
             this.simpleButton1.TabIndex = 56;
             this.simpleButton1.Text = "发送邮件";
             this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
+            // 
+            // simpleButton2
+            // 
+            this.simpleButton2.Location = new System.Drawing.Point(833, 69);
+            this.simpleButton2.Name = "simpleButton2";
+            this.simpleButton2.Size = new System.Drawing.Size(158, 43);
+            this.simpleButton2.TabIndex = 57;
+            this.simpleButton2.Text = "读取文件名";
+            this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click);
             // 
             // FrmUserGroup
             // 
@@ -362,5 +374,6 @@
         private DevExpress.XtraEditors.TextEdit Txt_Grpcode;
         private DevExpress.XtraEditors.LabelControl Lab_Grpcode;
         private DevExpress.XtraEditors.SimpleButton simpleButton1;
+        private DevExpress.XtraEditors.SimpleButton simpleButton2;
     }
 }

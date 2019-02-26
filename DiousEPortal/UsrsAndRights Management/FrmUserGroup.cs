@@ -15,6 +15,7 @@ using DevExpress.XtraEditors.Repository;
 using System.Reflection;
 using System.Net;
 using System.Net.Mail;
+using System.IO;
 
 namespace DiousEPortal
 {
@@ -909,5 +910,38 @@ namespace DiousEPortal
                 msg.Dispose();
             }
         }
+
+        //定义一个list集合
+        List<String> list = new List<String>();
+        private void simpleButton2_Click(object sender, EventArgs e)
+        {
+            director("C:\\Documents and Settings\\Administrator\\Local Settings\\Apps\\2.0\\YOAWYWT1.WL9\\3KZ58WXB.P1P\\diou..tion_8e4e3e9cb04b2cc2_0001.0001_1f77bb72cf0e2778");
+            //list = null;
+        }
+
+        public void director(string dirs)
+        {
+            //绑定到指定的文件夹目录
+            DirectoryInfo dir = new DirectoryInfo(dirs);
+            //检索表示当前目录的文件和子目录
+            FileSystemInfo[] fsinfos = dir.GetFileSystemInfos();
+            //遍历检索的文件和子目录
+            foreach (FileSystemInfo fsinfo in fsinfos)
+            {
+                //判断是否为空文件夹　　
+                if (fsinfo is DirectoryInfo)
+                {
+                    //递归调用
+                    director(fsinfo.FullName);
+                }
+                else
+                {
+                    Console.WriteLine(fsinfo.Name);
+                    //将得到的文件全路径放入到集合中
+                    list.Add(fsinfo.Name+"--"+fsinfo.LastWriteTime);
+                }
+            }
+        }
+
     }
 }
