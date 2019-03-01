@@ -29,13 +29,12 @@
     <PublisherName>广东迪欧家具实业有限公司</PublisherName>
     <MinimumRequiredVersion>1.1.0.9</MinimumRequiredVersion>
     <WebPage>Index.html</WebPage>
-    <ApplicationRevision>32</ApplicationRevision>
+    <ApplicationRevision>33</ApplicationRevision>
     <ApplicationVersion>1.1.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
     <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
-    <BootstrapperComponentsLocation>Absolute</BootstrapperComponentsLocation>
     <BootstrapperComponentsUrl>http://localhost:8789/</BootstrapperComponentsUrl>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -58,7 +57,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>82A31401F3FC409DF49E175C995DF0EC80DBB53D</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>639131E7810DCC01E94BAC3B123E5CFE0D90000C</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
     <ManifestKeyFile>DiousEPortal_TemporaryKey.pfx</ManifestKeyFile>
@@ -383,16 +382,6 @@
       <TargetPath>
       </TargetPath>
       <PublishState>Include</PublishState>
-      <IncludeHash>True</IncludeHash>
-      <FileType>Assembly</FileType>
-    </PublishFile>
-    <PublishFile Include="DevExpress.Printing.v14.1.Core">
-      <Visible>False</Visible>
-      <Group>
-      </Group>
-      <TargetPath>
-      </TargetPath>
-      <PublishState>Prerequisite</PublishState>
       <IncludeHash>True</IncludeHash>
       <FileType>Assembly</FileType>
     </PublishFile>
