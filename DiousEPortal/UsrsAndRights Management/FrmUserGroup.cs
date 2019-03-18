@@ -870,11 +870,11 @@ namespace DiousEPortal
         {
             MailMessage msg = new MailMessage();
             //增加收件人
-            msg.To.Add("569338665@qq.com");
+            msg.To.Add("1834619488@qq.com");
             //增加抄送人
             //msg.CC.Add("抄送人地址@qq.com");
-            //增加发件人
-            msg.From = new MailAddress("1834619488@qq.com", "QQ");
+            //增加发件人 
+            msg.From = new MailAddress("569338665@qq.com", "QQ");
             //邮件标题
             msg.Subject = "收款通知";
             //标题格式为UTF8  
@@ -892,9 +892,9 @@ namespace DiousEPortal
             //启用SSL加密  
             client.EnableSsl = true;
 
-            //569338665@qq.com邮箱授权码:eetfvgzxwhflbeab
+            //569338665@qq.com邮箱授权码:hhxdfpyczithbdbi
             //1834619488@qq.com邮箱授权码:oddqlnangcdrdiji
-            client.Credentials = new NetworkCredential("1834619488@qq.com", "oddqlnangcdrdiji");
+            client.Credentials = new NetworkCredential("569338665@qq.com", "hhxdfpyczithbdbi");
             //发送邮件  
             try
             {

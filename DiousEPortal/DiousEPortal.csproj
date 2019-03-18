@@ -117,6 +117,12 @@
     <Compile Include="CommonFrm\Filter.Designer.cs">
       <DependentUpon>Filter.cs</DependentUpon>
     </Compile>
+    <Compile Include="CommonFrm\FrmLkpData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommonFrm\FrmLkpData.Designer.cs">
+      <DependentUpon>FrmLkpData.cs</DependentUpon>
+    </Compile>
     <Compile Include="CommonFrm\UsrContr_Filter.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -162,6 +168,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="CommonFrm\Filter.resx">
       <DependentUpon>Filter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonFrm\FrmLkpData.resx">
+      <DependentUpon>FrmLkpData.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CommonFrm\FrmSaveAs.resx">
       <DependentUpon>FrmSaveAs.cs</DependentUpon>
