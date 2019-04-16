@@ -16,6 +16,7 @@ using System.Reflection;
 using System.Net;
 using System.Net.Mail;
 using System.IO;
+using System.Net.Http;
 
 namespace DiousEPortal
 {
@@ -943,5 +944,67 @@ namespace DiousEPortal
             }
         }
 
+        private void simpleButton3_Click(object sender, EventArgs e)
+        {
+
+            PostFunction1();
+        }
+        public void PostFunction()
+        {
+
+            string serviceAddress = "https://qyapi.weixin.qq.com/cgi-bin/message/send?access_token=FeqBe_p_2ue4KN6fGW59JazjHKDxvT3W3IOd2XPJmR0n97OpQy6AENs8td6rxAOldnhSiovbbT5R7vn-w4R838QTfPI45Kg0QDZCrYxrUShzyaNAopUr1aNCxZeR0KOcejJdOre1nhiKfi4cRJfkDGTSxlqE_U7qW5nK8pGlCpU2Jt-oiAFf2yROnsYqsp4uuGuiIbZNnONOOKGC0HdnqA";
+            HttpWebRequest request = (HttpWebRequest)WebRequest.Create(serviceAddress);
+
+            request.Method = "POST";
+            request.ContentType = "application/json";
+            string strContent = @"{ ""touser"": ""ChenQiuZai"",""toparty"": """",""totag"": """",""msgtype"": ""text"",""agentid"": ""1000002"",""text"": {""content"":""测试""},""safe"": ""0""}";
+            using (StreamWriter dataStream = new StreamWriter(request.GetRequestStream()))
+            {
+                dataStream.Write(strContent);
+                dataStream.Close();
+            }
+
+            HttpWebResponse response = (HttpWebResponse)request.GetResponse();
+            string encoding = response.ContentEncoding;
+            if (encoding == null || encoding.Length < 1)
+            {
+                encoding = "UTF-8"; //默认编码  
+            }
+            StreamReader reader = new StreamReader(response.GetResponseStream(), Encoding.GetEncoding(encoding));
+            string retString = reader.ReadToEnd();
+            //解析josn
+            //JObject jo = JObject.Parse(retString);
+            //Response.Write(jo["message"]["mmmm"].ToString());
+
+        }
+
+        public void PostFunction1()
+        {
+
+            string serviceAddress = "https://diouswx.do2006.com/Stock/Seach";
+            HttpWebRequest request = (HttpWebRequest)WebRequest.Create(serviceAddress);
+
+            request.Method = "POST";
+            request.ContentType = "application/json";
+            string strContent = @"{ ""GoodsCode"": ""M0162039700"",""corpid"": ""100001"",""corpsercret"": ""d4ef54ghbvd95awk""}";
+            using (StreamWriter dataStream = new StreamWriter(request.GetRequestStream()))
+            {
+                dataStream.Write(strContent);
+                dataStream.Close();
+            }
+
+            HttpWebResponse response = (HttpWebResponse)request.GetResponse();
+            string encoding = response.ContentEncoding;
+            if (encoding == null || encoding.Length < 1)
+            {
+                encoding = "UTF-8"; //默认编码  
+            }
+            StreamReader reader = new StreamReader(response.GetResponseStream(), Encoding.GetEncoding(encoding));
+            string retString = reader.ReadToEnd();
+            //解析josn
+            //JObject jo = JObject.Parse(retString);
+            //Response.Write(jo["message"]["mmmm"].ToString());
+
+        }
     }
 }

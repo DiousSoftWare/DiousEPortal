@@ -39,6 +39,7 @@
             this.Lab_Grpcode = new DevExpress.XtraEditors.LabelControl();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
+            this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.Tab_Common1)).BeginInit();
             this.Tab_Common1.SuspendLayout();
             this.Page_Detail.SuspendLayout();
@@ -76,7 +77,6 @@
             // 
             this.Tab_Common1.Location = new System.Drawing.Point(0, 51);
             this.Tab_Common1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.Tab_Common1.SelectedTabPage = this.Page_Detail;
             this.Tab_Common1.Size = new System.Drawing.Size(1030, 603);
             this.Tab_Common1.Click += new System.EventHandler(this.Tab_Common1_Click);
             // 
@@ -100,42 +100,43 @@
             // Page_Common2
             // 
             this.Page_Common2.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
-            this.Page_Common2.Size = new System.Drawing.Size(1010, 0);
+            this.Page_Common2.Size = new System.Drawing.Size(1088, 0);
             this.Page_Common2.Text = "授权用户";
             // 
             // Page_Preview
             // 
             this.Page_Preview.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.Page_Preview.Size = new System.Drawing.Size(1024, 574);
+            this.Page_Preview.Size = new System.Drawing.Size(1102, 591);
             // 
             // Split_Preview
             // 
             this.Split_Preview.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.Split_Preview.Size = new System.Drawing.Size(1024, 574);
+            this.Split_Preview.Size = new System.Drawing.Size(1102, 591);
             // 
             // Panel5
             // 
             this.Panel5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.Panel5.Size = new System.Drawing.Size(1024, 250);
+            this.Panel5.Size = new System.Drawing.Size(1102, 250);
             // 
             // Tab_Common3
             // 
             this.Tab_Common3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.Tab_Common3.Size = new System.Drawing.Size(1020, 315);
+            this.Tab_Common3.Size = new System.Drawing.Size(1098, 332);
             // 
             // Page_Common3
             // 
             this.Page_Common3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.Page_Common3.Size = new System.Drawing.Size(1014, 286);
+            this.Page_Common3.Size = new System.Drawing.Size(1092, 303);
             this.Page_Common3.Text = "授权用户";
             // 
             // Panel6
             // 
             this.Panel6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.Panel6.Size = new System.Drawing.Size(1014, 286);
+            this.Panel6.Size = new System.Drawing.Size(1092, 303);
             // 
             // Panel4
             // 
+            this.Panel4.Controls.Add(this.simpleButton3);
             this.Panel4.Controls.Add(this.simpleButton2);
             this.Panel4.Controls.Add(this.simpleButton1);
             this.Panel4.Controls.Add(this.Txt_Grpname);
@@ -162,11 +163,12 @@
             this.Panel4.Controls.SetChildIndex(this.Tab_Common6, 0);
             this.Panel4.Controls.SetChildIndex(this.simpleButton1, 0);
             this.Panel4.Controls.SetChildIndex(this.simpleButton2, 0);
+            this.Panel4.Controls.SetChildIndex(this.simpleButton3, 0);
             // 
             // Panel3
             // 
             this.Panel3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.Panel3.Size = new System.Drawing.Size(1010, 0);
+            this.Panel3.Size = new System.Drawing.Size(1088, 0);
             // 
             // Tab_Common6
             // 
@@ -182,27 +184,27 @@
             // Panel8
             // 
             this.Panel8.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.Panel8.Size = new System.Drawing.Size(760, 168);
+            this.Panel8.Size = new System.Drawing.Size(1088, 168);
             // 
             // Panel9
             // 
             this.Panel9.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.Panel9.Size = new System.Drawing.Size(760, 168);
+            this.Panel9.Size = new System.Drawing.Size(1088, 168);
             // 
             // Panel10
             // 
             this.Panel10.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.Panel10.Size = new System.Drawing.Size(760, 168);
+            this.Panel10.Size = new System.Drawing.Size(1088, 168);
             // 
             // Panel11
             // 
             this.Panel11.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.Panel11.Size = new System.Drawing.Size(760, 168);
+            this.Panel11.Size = new System.Drawing.Size(1088, 168);
             // 
             // Panel12
             // 
             this.Panel12.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.Panel12.Size = new System.Drawing.Size(760, 168);
+            this.Panel12.Size = new System.Drawing.Size(1088, 168);
             // 
             // Memo_Remark
             // 
@@ -297,7 +299,7 @@
             // simpleButton1
             // 
             this.simpleButton1.Location = new System.Drawing.Point(423, 44);
-            this.simpleButton1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.simpleButton1.Margin = new System.Windows.Forms.Padding(2);
             this.simpleButton1.Name = "simpleButton1";
             this.simpleButton1.Size = new System.Drawing.Size(111, 27);
             this.simpleButton1.TabIndex = 56;
@@ -307,12 +309,22 @@
             // simpleButton2
             // 
             this.simpleButton2.Location = new System.Drawing.Point(583, 44);
-            this.simpleButton2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.simpleButton2.Margin = new System.Windows.Forms.Padding(2);
             this.simpleButton2.Name = "simpleButton2";
             this.simpleButton2.Size = new System.Drawing.Size(111, 27);
             this.simpleButton2.TabIndex = 57;
             this.simpleButton2.Text = "读取文件名";
             this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click);
+            // 
+            // simpleButton3
+            // 
+            this.simpleButton3.Location = new System.Drawing.Point(762, 44);
+            this.simpleButton3.Margin = new System.Windows.Forms.Padding(2);
+            this.simpleButton3.Name = "simpleButton3";
+            this.simpleButton3.Size = new System.Drawing.Size(111, 27);
+            this.simpleButton3.TabIndex = 58;
+            this.simpleButton3.Text = "发送消息";
+            this.simpleButton3.Click += new System.EventHandler(this.simpleButton3_Click);
             // 
             // FrmUserGroup
             // 
@@ -374,5 +386,6 @@
         private DevExpress.XtraEditors.LabelControl Lab_Grpcode;
         private DevExpress.XtraEditors.SimpleButton simpleButton1;
         private DevExpress.XtraEditors.SimpleButton simpleButton2;
+        private DevExpress.XtraEditors.SimpleButton simpleButton3;
     }
 }
