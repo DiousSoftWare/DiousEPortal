@@ -13,6 +13,10 @@ using System.Dynamic;
 using System.Data.SqlClient;
 using DevExpress.XtraEditors.Repository;
 using System.Reflection;
+using System.Net;
+using System.Net.Mail;
+using System.IO;
+using System.Net.Http;
 
 namespace DiousEPortal
 {
@@ -75,7 +79,6 @@ namespace DiousEPortal
         {
             string TabNam = "t_ADMM_GrpMst";
             string PriKey = "fGrpCode";
-            //string FrmNam = "DiousEPortal.FrmUserGroup";
             FocColNam = "分组代号";
             if(BtnName==BtnNam.Add || BtnName==BtnNam.Copy)
             {
@@ -854,6 +857,154 @@ namespace DiousEPortal
 
         }
 
+        private void Txt_Grpname_EditValueChanged(object sender, EventArgs e)
+        {
 
+        }
+
+        private void Chk_IfUse_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void simpleButton1_Click(object sender, EventArgs e)
+        {
+            MailMessage msg = new MailMessage();
+            //增加收件人
+            msg.To.Add("1834619488@qq.com");
+            //增加抄送人
+            //msg.CC.Add("抄送人地址@qq.com");
+            //增加发件人 
+            msg.From = new MailAddress("569338665@qq.com", "QQ");
+            //邮件标题
+            msg.Subject = "收款通知";
+            //标题格式为UTF8  
+            msg.SubjectEncoding = Encoding.UTF8;
+            //邮件内容
+            msg.Body = "尊敬的李丽，您的账户有新的款项收取，你查收，谢谢！";
+            //内容格式为UTF8 
+            msg.BodyEncoding = Encoding.UTF8;
+
+            SmtpClient client = new SmtpClient();
+            //SMTP服务器地址 
+            client.Host = "smtp.qq.com";
+            //SMTP端口，QQ邮箱填写587  
+            client.Port = 587;
+            //启用SSL加密  
+            client.EnableSsl = true;
+
+            //569338665@qq.com邮箱授权码:hhxdfpyczithbdbi
+            //1834619488@qq.com邮箱授权码:oddqlnangcdrdiji
+            client.Credentials = new NetworkCredential("569338665@qq.com", "hhxdfpyczithbdbi");
+            //发送邮件  
+            try
+            {
+                client.Send(msg);
+            }
+            catch (SmtpException ex)
+            {
+                Common.ShowMsg(ex.Message);
+            }
+            finally
+            {
+                client.Dispose();
+                msg.Dispose();
+            }
+        }
+
+        //定义一个list集合
+        List<String> list = new List<String>();
+        private void simpleButton2_Click(object sender, EventArgs e)
+        {
+            director("C:\\Documents and Settings\\Administrator\\Local Settings\\Apps\\2.0\\YOAWYWT1.WL9\\3KZ58WXB.P1P\\diou..tion_8e4e3e9cb04b2cc2_0001.0001_1f77bb72cf0e2778");
+            //list = null;
+        }
+
+        public void director(string dirs)
+        {
+            //绑定到指定的文件夹目录
+            DirectoryInfo dir = new DirectoryInfo(dirs);
+            //检索表示当前目录的文件和子目录
+            FileSystemInfo[] fsinfos = dir.GetFileSystemInfos();
+            //遍历检索的文件和子目录
+            foreach (FileSystemInfo fsinfo in fsinfos)
+            {
+                //判断是否为空文件夹　　
+                if (fsinfo is DirectoryInfo)
+                {
+                    //递归调用
+                    director(fsinfo.FullName);
+                }
+                else
+                {
+                    Console.WriteLine(fsinfo.Name);
+                    //将得到的文件全路径放入到集合中
+                    list.Add(fsinfo.Name+"--"+fsinfo.LastWriteTime);
+                }
+            }
+        }
+
+        private void simpleButton3_Click(object sender, EventArgs e)
+        {
+
+            PostFunction1();
+        }
+        public void PostFunction()
+        {
+
+            string serviceAddress = "https://qyapi.weixin.qq.com/cgi-bin/message/send?access_token=FeqBe_p_2ue4KN6fGW59JazjHKDxvT3W3IOd2XPJmR0n97OpQy6AENs8td6rxAOldnhSiovbbT5R7vn-w4R838QTfPI45Kg0QDZCrYxrUShzyaNAopUr1aNCxZeR0KOcejJdOre1nhiKfi4cRJfkDGTSxlqE_U7qW5nK8pGlCpU2Jt-oiAFf2yROnsYqsp4uuGuiIbZNnONOOKGC0HdnqA";
+            HttpWebRequest request = (HttpWebRequest)WebRequest.Create(serviceAddress);
+
+            request.Method = "POST";
+            request.ContentType = "application/json";
+            string strContent = @"{ ""touser"": ""ChenQiuZai"",""toparty"": """",""totag"": """",""msgtype"": ""text"",""agentid"": ""1000002"",""text"": {""content"":""测试""},""safe"": ""0""}";
+            using (StreamWriter dataStream = new StreamWriter(request.GetRequestStream()))
+            {
+                dataStream.Write(strContent);
+                dataStream.Close();
+            }
+
+            HttpWebResponse response = (HttpWebResponse)request.GetResponse();
+            string encoding = response.ContentEncoding;
+            if (encoding == null || encoding.Length < 1)
+            {
+                encoding = "UTF-8"; //默认编码  
+            }
+            StreamReader reader = new StreamReader(response.GetResponseStream(), Encoding.GetEncoding(encoding));
+            string retString = reader.ReadToEnd();
+            //解析josn
+            //JObject jo = JObject.Parse(retString);
+            //Response.Write(jo["message"]["mmmm"].ToString());
+
+        }
+
+        public void PostFunction1()
+        {
+
+            string serviceAddress = "https://diouswx.do2006.com/Stock/Seach";
+            HttpWebRequest request = (HttpWebRequest)WebRequest.Create(serviceAddress);
+
+            request.Method = "POST";
+            request.ContentType = "application/json";
+            string strContent = @"{ ""GoodsCode"": ""M0162039700"",""corpid"": ""100001"",""corpsercret"": ""d4ef54ghbvd95awk""}";
+            using (StreamWriter dataStream = new StreamWriter(request.GetRequestStream()))
+            {
+                dataStream.Write(strContent);
+                dataStream.Close();
+            }
+
+            HttpWebResponse response = (HttpWebResponse)request.GetResponse();
+            string encoding = response.ContentEncoding;
+            if (encoding == null || encoding.Length < 1)
+            {
+                encoding = "UTF-8"; //默认编码  
+            }
+            StreamReader reader = new StreamReader(response.GetResponseStream(), Encoding.GetEncoding(encoding));
+            string retString = reader.ReadToEnd();
+            //解析josn
+            //JObject jo = JObject.Parse(retString);
+            //Response.Write(jo["message"]["mmmm"].ToString());
+
+        }
     }
 }
